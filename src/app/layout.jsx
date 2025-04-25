@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "STHLM Orchestra | Alla konserter",
+    default: "STHLM Orchestra | All concerts",
     template: "%s | STHLM Orchestra"
   },
-  description: "Utforska bland livemusik i Stockholm.",
+  description: "Explore live music in Stockholm.",
 };
 
 export default function RootLayout({ children }) {
