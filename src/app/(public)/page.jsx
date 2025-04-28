@@ -1,8 +1,11 @@
+import { Hero } from '@/components/sections/hero'
 import React from 'react'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div className='wrapper'>
+      <Hero />
+    </div>
   )
 }
 
