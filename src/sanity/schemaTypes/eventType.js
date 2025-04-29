@@ -3,25 +3,26 @@ import {ConfettiIcon} from '@sanity/icons'
 
 
 export const eventType = defineType({
-    name: 'events',
-    title: 'Events',
-    type: 'document',
+    name: 'event',
+    title: 'Event',
+    type: 'document', //Saving "Events" as a doc in our database in Sanity
     icon: ConfettiIcon,
-    fields: [
+    fields: [ //Defines what fields an event should contain 
         defineField({
-            name: 'title',
+            name: 'name',
+            title: 'Title', //Displays the field as "Title" to the user instead of Name
             type: 'string'
         }),
         defineField({
             name: 'slug',
             type: 'slug',
             options: {
-                source: 'title'
+                source: 'name' //Gets the slug from name
             }
         }),
         defineField({
             name: 'description',
-            type: 'text',
+            type: 'blockContent',
           }),
         defineField({
             name: 'image',
