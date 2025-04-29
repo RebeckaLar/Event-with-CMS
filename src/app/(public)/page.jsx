@@ -1,4 +1,4 @@
-import { Events } from '@/components/sections/events'
+import { UpcomingEvents } from '@/components/sections/upcomingEvents'
 import { Hero } from '@/components/sections/hero'
 import React from 'react'
 
@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <div className='wrapper'>
       <Hero />
-      <Events title='Upcoming Events'/>
+      <UpcomingEvents title='Upcoming concerts'/>
     </div>
   )
 }

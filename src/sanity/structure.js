@@ -5,9 +5,9 @@ export const structure = (S) =>
     .items([
       // S.documentTypeListItem('post').title('Posts'),
       S.documentTypeListItem('category').title('Categories'),
-      S.documentTypeListItem('events').title('Events'),
+      S.documentTypeListItem('event').title('Event'),
       S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['category', 'events'].includes(item.getId()),
+        (item) => item.getId() && !['category', 'event'].includes(item.getId()),
       ),
     ])
