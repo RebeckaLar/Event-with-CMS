@@ -3,6 +3,7 @@ import { Hero } from '@/components/sections/hero'
 import React from 'react'
 
 function HomePage() {
+  console.log(UpcomingEvents)
   return (
     <div className='wrapper'>
       <Hero />

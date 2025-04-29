@@ -1,4 +1,7 @@
 import { getEventBySlug } from '@/sanity/lib/api'
+import { PortableText } from 'next-sanity'
+import Image from 'next/image'
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 async function EventDetailsPage({ params }) {
@@ -7,12 +10,28 @@ async function EventDetailsPage({ params }) {
     const { slug } = await params 
 
     const event = await getEventBySlug(slug)
-    console.log(slug)
 
-    console.log(event)
+    if(!event) {
+      return notFound()
+    }
 
   return (
-    <div>EventDetailsPage</div>
+    <div className='wrapper'>
+      <div className='w-full flex justify-center'>
+        <Image 
+        className='max-w-2xl object-cover rounded-xl'
+        src={event.image.url} 
+        alt={event.image.alt} 
+        height={700} 
+        width={900}/>
+      </div>
+      <div className='flex items-center justify-between my-10'>
+        <h1 className='text-3xl font-bold'>{event.name}</h1>
+      </div>
+      <div className='prose-sm'>
+        <PortableText value={event.description}/>
+      </div>
+    </div>
   )
 }
 
