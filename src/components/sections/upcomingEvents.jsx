@@ -22,7 +22,7 @@ export const UpcomingEvents = async ({ title }) => {
       events && events.map(event => (
         <Link key={event._id} href={`/events/${event.slug}`} className='border border-slate-700 rounded-xl overflow-hidden hover:border-2 hover:scale-105 transition'>
           
-          <div className='w-full'>
+          <div className='w-full aspect-video'>
             <Image 
             src={event.image.url} 
             alt={event.image.alt} 

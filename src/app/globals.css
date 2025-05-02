@@ -5,11 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 .wrapper {
-   @apply container mx-auto px-4
+   @apply container mx-auto px-4;
 }
 
 .gradient {
-   @apply bg-gradient-to-r from-orange-400 to-amber-100 bg-clip-text text-transparent
+   @apply bg-gradient-to-r from-orange-400 to-amber-100 bg-clip-text text-transparent;
 }
 
 @theme inline {

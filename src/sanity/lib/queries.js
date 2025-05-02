@@ -20,4 +20,17 @@ export const GET_EVENT_QUERY = defineQuery(`*[_type == 'event' && slug.current =
   },
   description
 }`)
-// { slug: 'red-bull-symphonic-viktor-leksell' }
+
+export const GET_PAGES_QUERY = defineQuery(`*[_type == 'page'] {
+  _id,
+  title,
+  "slug": slug.current 
+}`)
+
+export const GET_PAGE_QUERY = defineQuery(`*[_type == 'page' && slug.current == $slug][0] {
+  _id,
+  title,
+  "slug": slug.current,
+  description,
+  sections
+}`)
