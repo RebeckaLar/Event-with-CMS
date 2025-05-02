@@ -3,7 +3,7 @@ import { NavBar } from "@/components/navbar"
 
 function PublicLayout({ children }) {
   return (
-    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+    <div className="wrapper min-h-screen grid grid-rows-[auto_1fr_auto]">
       <NavBar />
       <main>
         { children }
