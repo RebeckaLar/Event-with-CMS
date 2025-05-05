@@ -1,8 +1,6 @@
 
 
 import { getEvents } from '@/sanity/lib/api'
-// import { client } from '@/sanity/lib/client'
-// import { GET_EVENTS_QUERY } from '@/sanity/lib/queries'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -15,7 +13,7 @@ export const UpcomingEvents = async ({ title }) => {
     // console.log(events)
 
   return (
-    <div>
+    <div className='wrapper'>
         <h2 className='text-4xl mb-10 font-bold'>{title}</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
     {

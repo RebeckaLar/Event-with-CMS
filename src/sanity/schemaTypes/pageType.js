@@ -7,10 +7,17 @@ export const pageType = defineType({
     title: "Page",
     type: "document",
     icon: FileCode2Icon,
+    groups: [
+        {
+            name: "seo",
+            title: "SEO"
+        }
+    ],
     fields: [
         defineField({
             name: "title",
             type: "string",
+            group: "seo",
             validation: (rule) => rule.required()
         }),
         defineField({
@@ -24,24 +31,25 @@ export const pageType = defineType({
         defineField({
             name: "description",
             title: "Meta - description",
-            type: "string", 
+            type: "string",
+            group: "seo",
             validation: (rule) => rule.required()
         }),
         defineField({
             name: "sections",
             type: "array",
             of: [
-                defineArrayMember({ type: "heroSection" }),
-                // defineArrayMember({ type: "projectsSection" }),
+                defineArrayMember({ type: "heroSectionType" }),
+                defineArrayMember({ type: "eventsSectionType" }),
                 // defineArrayMember({ type: "featuresSection" })
             ],
-            // options: {
-            //     insertMenu: {
-            //         views: [
-            //             { name: "grid", previewImageUrl: (schemaTypeName) => `/static/preview-${schemaTypeName}.jpg` },
-            //         ]
-            //     }
-            // }
+            options: {
+                insertMenu: {
+                    views: [
+                        { name: "grid", previewImageUrl: (schemaTypeName) => `/static/preview-${schemaTypeName}.jpg`},
+                    ]
+                }
+            }
         })
     ]
 })

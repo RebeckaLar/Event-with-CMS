@@ -2,8 +2,8 @@ import { BlockContentIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 
-export const heroSection = defineType({
-    name: "heroSection",
+export const heroSectionType = defineType({
+    name: "heroSectionType",
     title: "Hero",
     type: "object",
     icon: BlockContentIcon,
