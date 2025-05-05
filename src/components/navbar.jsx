@@ -3,7 +3,7 @@ import React from 'react'
 import { NavLink } from './nav-link'
 import { getPages } from '@/sanity/lib/api'
 
-export const NavBar = async () => {
+export const Navbar = async () => {
 
   const pages = await getPages()
 
