@@ -1,5 +1,7 @@
-import { heroSection } from "./heroSectionType";
+import { eventsSectionType } from "./eventSectionType";
+import { heroSectionType } from "./heroSectionType";
 
 export const sections = [
-    heroSection
+    heroSectionType,
+    eventsSectionType,
 ]
