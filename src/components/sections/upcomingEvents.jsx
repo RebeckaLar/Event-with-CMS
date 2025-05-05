@@ -13,7 +13,7 @@ export const UpcomingEvents = async ({ title }) => {
     // console.log(events)
 
   return (
-    <div className='wrapper'>
+    <section className='wrapper'>
         <h2 className='text-4xl mb-10 font-bold'>{title}</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
     {
@@ -34,6 +34,6 @@ export const UpcomingEvents = async ({ title }) => {
       ))
     }
         </div>
-    </div>
+    </section>
   )
 }

@@ -1,12 +1,16 @@
 import { UpcomingEvents } from '@/components/sections/upcomingEvents'
 import { Hero } from '@/components/sections/hero'
 import React from 'react'
+import { getPageBySlug } from '@/sanity/lib/api'
+import { Sections } from '@/components/sections/sections'
 
-function HomePage() {
+async function HomePage() {
+
+  const pageResult = await getPageBySlug('/')
+
   return (
     <div className='wrapper'>
-      <Hero />
-      <UpcomingEvents title='Upcoming concerts'/>
+        <Sections sections={pageResult.sections}/>
     </div>
   )
 }

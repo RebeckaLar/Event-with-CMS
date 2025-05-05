@@ -1,8 +1,20 @@
 import { getEventBySlug } from '@/sanity/lib/api'
+import { client } from '@/sanity/lib/client'
+import { GET_EVENT_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from 'next-sanity'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import React from 'react'
+
+export const generateMetadata = async ({ params }) => {
+  const { slug } = await params
+
+  const event = await client.fetch(GET_EVENT_QUERY, { slug })
+
+  return {
+    title: event.name
+  }
+}
 
 async function EventDetailsPage({ params }) {
 
