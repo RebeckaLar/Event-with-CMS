@@ -9,7 +9,7 @@ async function HomePage() {
   const pageResult = await getPageBySlug('/')
 
   return (
-    <div className='wrapper'>
+    <div>
         <Sections sections={pageResult.sections}/>
     </div>
   )
